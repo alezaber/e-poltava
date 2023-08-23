@@ -3,7 +3,11 @@
   "routes": [
     {
       "route": "/api*",
-      "rewrite": "/stub.json"
+      "rewrite": "/stub.json",
+      "headers": {
+        "Cache-Control": "public, max-age=604800, immutable",
+        "ContentType" : "application/json"
+      }
     }
   ],
     "navigationFallback": {
@@ -27,7 +31,7 @@
   },
   "globalHeaders": {
     "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'",
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "authorization, cache-control, content-type, pragma, access-control-allow-origin, enctype",
     "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
   },
   "mimeTypes": {
