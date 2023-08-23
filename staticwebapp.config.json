@@ -6,7 +6,7 @@
       "rewrite": "/stub.json",
       "headers": {
         "Cache-Control": "public, max-age=604800, immutable",
-        "ContentType" : "application/json"
+        "Content-Type" : "application/json"
       }
     }
   ],
